@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skysoft</title> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .profile-img {
+            width: 30px;
+            height: 30px;
+        }
+        .card-custom {
+            margin-right: 1rem; /* Adjust spacing between cards */
+        }
+        .btn-custom-spacing {
+            margin-left: 1rem; /* Adjust spacing for buttons */
+        }
+    </style>
+</head>
+<body>
+    <!-- start the navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom bg-success text-white">
+        <div class="container-fluid">
+            <!-- Toggler Button for Mobile View -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Collapsible Navbar Content -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item">
+                        <a class="nav-link text-white active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="viewProfile.html">Profiles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Reports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Settings</a>
+                    </li>
+                </ul>
+                <!-- Right-aligned icons -->
+                <div class="d-flex align-items-center">
+                    <!-- Bill Icon -->
+                    <a class="nav-link me-3" href="#">
+                        <i class="bi bi-bell" style="font-size: 1.5rem;"></i>
+                    </a>
+                    <!-- Profile Picture -->
+                    <a class="nav-link" href="#">
+                        <img src="/images/8N7A5921.JPG" alt="Profile" class="profile-img rounded-circle">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- end the navbar -->
+    <!-- start content -->
+    <div class="container mt-5">
+        <!-- start welcome message and new request button -->
+        <div class="row">
+            <div class="col">
+                <h4 class="text mb-4 position-relative">Welcome Back Yamen! Here are your latest updates.</h4>
+            </div>
+            <div class="col d-flex justify-content-end">
+                <button class="btn btn-success btn-custom-spacing">New Request</button>
+            </div>
+        </div>
+        <!-- end welcome message and new request button -->
+        <div class="container ">
+            <!-- Flex container for horizontal layout -->
+            <div class="d-flex flex-wrap ">
+                <!-- User Card -->
+                <div class="card bg-transparent shadow mb-3 card-custom me-5 mt-4" style="max-width: 100%;">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center flex-wrap">
+                            <img src="/images/8N7A5921.JPG" alt="Profile" class="profile-img rounded-circle" width="30" height="30">
+                            <div class="ms-2">
+                                <h5 class="card-title">Yamen Amjed</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary">Java Developer</h6>
+                            </div>
+                            <a href="#" class="btn btn-outline-success ms-auto mt-2 mt-md-0">View Profile</a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex align-items-center flex-wrap">
+                            <i class="bi bi-person bi-5x me-2" style="font-size: 2.5rem;"></i>
+                            <div class="ms-1 me-5">
+                                <p class="card-title fw-bold">Reporting To :</p>
+                                <h6 class="card-subtitle mb-2 text-body-secondary">Salwa Assem</h6>
+                            </div>
+                            <i class="bi bi-star bi-5x ms-3 me-2" style="font-size: 2.5rem;"></i>
+                            <div class="ms-1">
+                                <p class="card-title fw-bold">Reporting To :</p>
+                                <h6 class="card-subtitle mb-2 text-body-secondary">Salwa Assem</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+    
+                <!-- Vacation Requests Card -->
+                <div class="card bg-success text-white card-custom me-3 me-5 mt-4" style="width: 15rem;">
+                    <div class="card-body shadow">
+                        <h1 class="card-title">10</h1>
+                        <i class="bi bi-calendar2-check bi-5x" style="font-size: 3rem;"></i>
+                        <p class="card-text ">Vacation Requests</p>
+                    </div>
+                </div>
+    
+                <!-- Leave Requests Card -->
+                <div class="card bg-success text-white card-custom mt-4" style="width: 15rem;">
+                    <div class="card-body shadow">
+                        <h1 class="card-title">10</h1>
+                        <i class="bi bi-calendar2-date bi-5x" style="font-size: 3rem;"></i>
+                        <p class="card-text">Leave Requests</p>
+                    </div>
+                </div>
+            </div>
+            <!-- slider -->
+            <div id="newsCarousel" class="carousel slide mt-4" data-bs-ride="carousel" data-bs-interval="10000">
+                <!-- Indicators -->
+                 <p style="font-size: 15px;" class="fw-bold" >Latest news : </p>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="2" aria-label="Slide 2"></button>
+
+                    <!-- Add more indicators as needed -->
+                </div>
+                <div class="carousel-inner">
+                    <!-- First slide -->
+                    <div class="carousel-item active">
+                        <img src="/images/news.jpg" alt="News 1" width="100%" height="300px">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>First News </h5>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati, accusamus.</p>
+                        </div>
+                    </div>
+                    <!-- Second slide -->
+                    <div class="carousel-item">
+                        <img src="/images/news2.jpg" alt="News 2" width="100%" height="300px">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second News </h5>
+                            <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, laudantium.</p>
+                        </div>
+                    </div>
+                    <!-- theerd slide -->
+                    <div class="carousel-item">
+                        <img src="/images/news3.jpg" alt="News 2" width="100%" height="300px">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Last News </h5>
+                            <p style="font-weight: 700;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, nam.</p>
+                        </div>
+                    </div>
+                    <!-- Add more slides as needed -->
+                </div>
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <!-- end the carousel -->
+            <!-- end slider -->
+             <!-- vacation request start -->
+            <nav class="navbar bg-body-tertiary mt-3">
+                <div class="container-fluid pb-2" style="border-bottom: 2px solid gray;">
+                    <div class="d-flex">
+                        <i class="bi bi-calendar2-check bi-5x" style="color: green; font-size: 2rem;"></i>
+                        <p class="mt-2 ms-2 fw-bold" style="font-size: 20px;" >Vacation Requests</p>
+                    </div>
+                  <form class="d-flex" role="search" id="search-form">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search-input">
+                    <button class="btn btn-outline-success" type="submit">Search</button>                    
+                  </form>                  
+                </div>
+                <div class="row mt-4" id="cards-container">
+                    <!-- Example Vacation Request Card -->
+                    <div class="col-md-6 col-lg-3 mb-3 " data-name="John Doe">
+                        <div class="card vacation-card">
+                            <div class="card-body">
+                                <div class=" align-items-center">
+                                    <img src="/images/8N7A5661.JPG" alt="Profile" class="card-photo">
+                                    <div class="ms-3">
+                                        <h5 class="card-title">John Doe</h5>
+                                        <p class="card-text">Submitted: 2024-08-30</p>
+                                        <p class="card-text">Duration: 5 days</p>
+                                        <p class="card-text">Salary: $500</p>
+                                    </div>
+                                </div>
+                                <div class="justify-content-end mt-3">
+                                    <button class="btn btn-danger me-2">Decline</button>
+                                    <button class="btn btn-success">Approve</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Repeat for other cards -->
+                    <div class="col-md-6 col-lg-3 mb-3" data-name="Jane Smith">
+                        <div class="card vacation-card">
+                            <div class="card-body">
+                                <div class=" align-items-center">
+                                    <img src="/images/8N7A5661.JPG" alt="Profile" class="card-photo rounded-circle"  >
+                                    <div class="ms-3">
+                                        <h5 class="card-title">Jane Smith</h5>
+                                        <p class="card-text">Submitted: 2024-08-29</p>
+                                        <p class="card-text">Duration: 3 days</p>
+                                        <p class="card-text">Salary: $300</p>
+                                    </div>
+                                </div>
+                                <div class=" justify-content-end mt-3">
+                                    <button class="btn btn-danger me-2">Decline</button>
+                                    <button class="btn btn-success">Approve</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-3" data-name="Alice Johnson">
+                        <div class="card vacation-card">
+                            <div class="card-body">
+                                <div class=" align-items-center">
+                                    <img src="/images/8N7A5661.JPG" alt="Profile" class="card-photo">
+                                    <div class="ms-3">
+                                        <h5 class="card-title">Alice Johnson</h5>
+                                        <p class="card-text">Submitted: 2024-08-28</p>
+                                        <p class="card-text">Duration: 7 days</p>
+                                        <p class="card-text">Salary: $700</p>
+                                    </div>
+                                </div>
+                                <div class=" justify-content-end mt-3">
+                                    <button class="btn btn-danger me-2">Decline</button>
+                                    <button class="btn btn-success">Approve</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-3" data-name="Bob Brown">
+                        <div class="card vacation-card">
+                            <div class="card-body">
+                                <div class=" align-items-center">
+                                    <img src="/images/8N7A5661.JPG" alt="Profile" class="card-photo">
+                                    <div class="ms-3">
+                                        <h5 class="card-title">Bob Brown</h5>
+                                        <p class="card-text">Submitted: 2024-08-27</p>
+                                        <p class="card-text">Duration: 2 days</p>
+                                        <p class="card-text">Salary: $200</p>
+                                    </div>
+                                </div>
+                                <div class=" justify-content-end mt-3">
+                                    <button class="btn btn-danger me-2">Decline</button>
+                                    <button class="btn btn-success">Approve</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex mt-4 justify-content-end">
+                        <a href="viewMore.html" class="text-success " style="font-size: 1.2rem; text-decoration: none;">View More</a>
+                    </div>
+                </div>
+            </nav>
+            
+            <!--  vacation request end -->
+        </div>
+
+        
+          
+        
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="dynamic.js"></script>
+
+</body>
+</html>

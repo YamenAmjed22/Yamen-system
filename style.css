@@ -1,0 +1,22 @@
+/* .carousel-item img {
+    width: 100%;
+    height: auto;
+}
+.carousel {
+    max-width: 800px; 
+    margin: 0 auto; 
+} */
+
+.card-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+.card-body {
+    text-align: center; /* Center-align the content within the card body */
+    padding-top: 20px; /* Add padding to create space for the image */
+}
